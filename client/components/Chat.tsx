@@ -17,7 +17,7 @@ const Chat = () => {
             <span className="bg-[#312F2F] text-white py-2 px-5 rounded-[30px] text-sm font-medium">Hello how are you?</span>
         </div>
         <div className="flex justify-end mt-5">
-        <span className="bg-[#312F2F] text-white py-2 px-5 rounded-[30px] text-sm font-medium">Hello how are you?</span>
+        <span className="bg-[#55805e] text-white py-2 px-5 rounded-[30px] text-sm font-medium">Hello how are you?</span>
         </div>
         <div className="flex items-center gap-[13px] mt-5">
             <div className="relative w-12 h-12 ">

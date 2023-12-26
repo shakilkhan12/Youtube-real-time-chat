@@ -1,5 +1,6 @@
 import Chat from "./Chat"
 import Conversation from "./Conversation"
+import Form from "./Form"
 import Nav from "./Nav"
 
 const ChatWrapper = () => {
@@ -8,6 +9,7 @@ const ChatWrapper = () => {
         <Conversation />
         <Nav />
         <Chat />
+        <Form />
     </div>
   )
 }
