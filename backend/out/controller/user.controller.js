@@ -9,9 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const express_validator_1 = require("express-validator");
 class User {
     register(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const errors = (0, express_validator_1.validationResult)(req);
+            if (errors.isEmpty()) {
+                const { name, email, password } = req.body;
+                return res.status(200).json(req.body);
+            }
+            else {
+                return res.status(400).json(errors.array());
+            }
         });
     }
 }

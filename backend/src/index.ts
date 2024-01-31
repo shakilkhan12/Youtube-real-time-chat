@@ -6,6 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // connect database
 connection()
+app.use(express.json())
 // routes
 app.use('/api', userRoutes);
 app.listen(PORT, () => {
