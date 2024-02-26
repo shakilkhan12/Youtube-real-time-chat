@@ -1,5 +1,6 @@
-import express, {Request, Response} from "express";
+import express from "express";
 import 'dotenv/config'
+import cookieParser from "cookie-parser"
 import connection from "./config/db";
 import userRoutes from "./routes/user.routes"
 const app = express();
@@ -7,6 +8,8 @@ const PORT = process.env.PORT || 5000;
 // connect database
 connection()
 app.use(express.json())
+app.use(cookieParser())
+
 // routes
 app.use('/api', userRoutes);
 app.listen(PORT, () => {
